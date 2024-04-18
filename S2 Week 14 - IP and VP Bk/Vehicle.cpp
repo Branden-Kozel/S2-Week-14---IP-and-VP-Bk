@@ -4,27 +4,32 @@ Date: 4/18/24
 Class: 1202 201
 \*/
 
-#include "Car.h"
+#include "Vehicle.h"
 #include <iostream>
 
 using namespace std;
 
-Car::Car() : numDoors(0) {}
+Vehicle::Vehicle() : yearBuilt(0) {}
 
-Car::Car(string manufacturer, int yearBuilt, int numDoors) : Vehicle(manufacturer, yearBuilt), numDoors(numDoors) {}
+Vehicle::Vehicle(string manufacturer, int yearBuilt) : manufacturer(manufacturer), yearBuilt(yearBuilt) {}
 
-int Car::getNumDoors() const 
-{
-    return numDoors;
+string Vehicle::getManufacturer() const {
+    return manufacturer;
 }
 
-void Car::setNumDoors(int numDoors) 
-{
-    this->numDoors = numDoors;
+void Vehicle::setManufacturer(string manufacturer) {
+    this->manufacturer = manufacturer;
 }
 
-void Car::displayInfo() const 
-{
-    Vehicle::displayInfo();
-    cout << "Number of doors: " << numDoors << endl;
+int Vehicle::getYearBuilt() const {
+    return yearBuilt;
+}
+
+void Vehicle::setYearBuilt(int yearBuilt) {
+    this->yearBuilt = yearBuilt;
+}
+
+void Vehicle::displayInfo() const {
+    cout << "Manufacturer: " << manufacturer << endl;
+    cout << "Year Built: " << yearBuilt << endl;
 }
