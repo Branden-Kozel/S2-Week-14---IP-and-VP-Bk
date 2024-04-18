@@ -1,4 +1,9 @@
-#pragma once
+/*\
+Name:Branden Kozel
+Date: 4/18/24
+Class: 1202 201
+\*/
+
 #pragma once
 #ifndef VEHICLE_H
 #define VEHICLE_H
